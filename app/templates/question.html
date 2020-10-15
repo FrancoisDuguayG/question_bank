@@ -4,4 +4,16 @@
   <b>Auteur</b>: {{matricule}} <br>
   <b>Type</b>: {{type_question}}<br>
   <b>Question</b>: {{question}}<br>
-  <b>Réponse</b>: {{answer}}<br>
+  <button onclick="toggle()">Réponse</button>
+  <p id="reponse" style="display: none;"><b>Réponse</b>: {{answer}}<br></p>
+
+<script>
+  function toggle() {
+  var x = document.getElementById("reponse");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
